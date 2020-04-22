@@ -73,7 +73,7 @@ public interface Student_ {
 You may assume that the CGPA is not calculated but is entered directly by the user when instantiating an object of this class. 
 
 ### 4.1 Hash functions
-The performance of a hash table crucially depends on the choice of the hash function(s). Ideally, we would like to have hash functions that provide a uniform distribution of hash values to avoid unnecessary collisions but in practice we will be using hash functions that are fast to compute but possibly not perfectly uniform. (Note that hash tables don’t need many security properties provided by the slower cryptographic hash functions like md5/sha256 etc.) We will be using djb2 and sdbm hashing algorithms[References](#References "Goto References") on the concatenation of the student’s first name and last name for hash functions h1 and h2 respectively. 
+The performance of a hash table crucially depends on the choice of the hash function(s). Ideally, we would like to have hash functions that provide a uniform distribution of hash values to avoid unnecessary collisions but in practice we will be using hash functions that are fast to compute but possibly not perfectly uniform. (Note that hash tables don’t need many security properties provided by the slower cryptographic hash functions like md5/sha256 etc.) We will be using djb2 and sdbm hashing algorithms[1](#References "Goto References") on the concatenation of the student’s first name and last name for hash functions h1 and h2 respectively. 
 ```
 import java.lang.Math; 
 public static long djb2(String str, int hashtableSize) { 
